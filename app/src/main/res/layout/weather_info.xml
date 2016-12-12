@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-   
-   <RelativeLayout
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
        android:id="@+id/title"
        android:layout_width="fill_parent"
        android:layout_height="45.0dip"
-       android:background="#ffcd2626"
+       android:background="#544c4c"
        android:gravity="center_vertical">
 
        <ImageView
@@ -23,7 +25,7 @@
            android:layout_height="40dip"
            android:layout_marginTop="2.0dip"
            android:layout_toRightOf="@id/title_city_manager"
-           android:background="#A71717"/>
+           android:background="#ffffff"/>
 
        <TextView
             android:id="@+id/title_city_name"
@@ -44,8 +46,18 @@
             android:layout_gravity="center"
             android:src="@drawable/title_update"
             android:visibility="visible"/>
-      
-       <ImageView
+
+        <ProgressBar
+            android:id="@+id/title_update_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            style="@style/title_update_progressbar_style"/>
+
+
+        <ImageView
            android:id="@+id/title_share"
            android:layout_width="45.0dip"
            android:layout_height="45.0dip"
@@ -115,6 +127,19 @@
             android:text="湿度:57%"
             android:textColor="@android:color/white"
             android:textSize="15.0sp" />
+
+          <!-- 温度信息 -->
+        <TextView
+            android:id="@+id/Currenttemper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/city"
+            android:layout_marginLeft="27.0dip"
+            android:singleLine="true"
+            android:text="5℃"
+            android:textColor="@android:color/white"
+            android:textSize="50.0sp" />
 
             <!-- PM2.5整体信息块 -->
         <LinearLayout

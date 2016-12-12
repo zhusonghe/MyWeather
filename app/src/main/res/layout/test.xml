@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <EditText
+       android:id="@+id/text111"
+       android:layout_width="fill_parent"
+       android:layout_height="40.0dip"
+       android:layout_alignParentTop="true"
+       />
+    <ImageView
+        android:id="@+id/title_back"
+        android:layout_width="45.0dip"
+        android:layout_height="40.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/text111"
+        android:src="@drawable/base_action_bar_back_normal"/>
+
+
+
+    <TextView
+        android:id="@+id/text222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_back"
+        android:text="Hello World!"/>
+
+</RelativeLayout>

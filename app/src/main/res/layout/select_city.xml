@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="#807272">
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="当前城市：北京"
+            android:textColor="#ffffffff"
+            android:textSize="20.0dip" />
+        <ImageView
+            android:id="@+id/title_backoff"
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/base_action_bar_back_normal"/>
+
+        <ImageView
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/title_backoff"
+            android:background="#ffffff"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_top">
+        <com.example.administrator.mini_weather.ClearEditText
+            android:id="@+id/search_city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4.0dip"
+            android:hint="搜索全国城市(中文)"
+            android:drawableLeft="@drawable/magnifying_glass"
+            android:drawablePadding="6.0dp"
+            android:singleLine="true"
+            android:background="@drawable/contact_search_box_edittext_keyword_background"
+            android:textColor="#ff000000"
+            android:textColorHint="#ffcccccc"
+            android:textSize="15.0dp"/>
+
+        <ListView
+            android:layout_below="@id/search_city"
+            android:id="@+id/title_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            >
+
+        </ListView>
+    </RelativeLayout>
+
+
+</RelativeLayout>
