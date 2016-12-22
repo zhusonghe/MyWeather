@@ -8,23 +8,25 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:layout_weight="3">
+        android:orientation="vertical"
+        android:layout_weight="3.3">
 
         <!-- 明日星期 -->
         <TextView
             android:id="@+id/tomorrow_date"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期五"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:text="N/A"
+            android:textSize="20dp"
            />
 
         <!-- 明日天气图片 -->
         <ImageView
             android:id="@+id/tomorrow_img"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
             android:src="@drawable/biz_plugin_weather_qing" />
 
         <!-- 明日温度 -->
@@ -32,6 +34,9 @@
             android:id="@+id/tomorrow_wendu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 明日气候 -->
@@ -39,6 +44,9 @@
             android:id="@+id/tomorrow_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 明日风力 -->
@@ -46,6 +54,9 @@
             android:id="@+id/tomorrow_fengli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
     </LinearLayout>
@@ -54,21 +65,24 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:layout_weight="3">
+        android:orientation="vertical"
+        android:layout_weight="3.3">
 
         <!-- 后天星期 -->
         <TextView
             android:id="@+id/houtian_date"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期六"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 后天天气图片 -->
         <ImageView
             android:id="@+id/houtian_img"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
 
             android:src="@drawable/biz_plugin_weather_qing" />
@@ -78,6 +92,9 @@
             android:id="@+id/houtian_wendu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 后天气候 -->
@@ -85,6 +102,9 @@
             android:id="@+id/houtian_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 后天风力 -->
@@ -92,6 +112,9 @@
             android:id="@+id/houtian_fengli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
     </LinearLayout>
@@ -101,21 +124,24 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:layout_weight="3">
+        android:orientation="vertical"
+        android:layout_weight="3.3">
 
         <!-- 大后天星期 -->
         <TextView
             android:id="@+id/dahoutian_date"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="星期日"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 大后天天气图片 -->
         <ImageView
             android:id="@+id/dahoutian_img"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
 
             android:src="@drawable/biz_plugin_weather_qing" />
@@ -125,6 +151,9 @@
             android:id="@+id/dahoutian_wendu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 大后天气候 -->
@@ -132,6 +161,9 @@
             android:id="@+id/dahoutian_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
         <!-- 大后天风力 -->
@@ -139,6 +171,9 @@
             android:id="@+id/dahoutian_fengli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="N/A"
+            android:textSize="20dp"
             />
 
     </LinearLayout>

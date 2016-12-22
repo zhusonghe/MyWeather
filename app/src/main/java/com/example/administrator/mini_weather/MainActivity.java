@@ -313,7 +313,7 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
         views.add(inflater.inflate(R.layout.nextday1,null));
         views.add(inflater.inflate(R.layout.nextday2,null));
         vpadpter = new ViewPagerAdapter(views,this);
-        vp = (ViewPager) findViewById(R.id.viewpager);
+        vp = (ViewPager) findViewById(R.id.viewpager2);
         vp.setAdapter(vpadpter);
         vp.setOnPageChangeListener(this);
     }
