@@ -1,11 +1,13 @@
 package com.example.administrator.mini_weather;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -14,11 +16,12 @@ import java.util.List;
 /**
  * Created by shenzhu on 2016/11/29.
  */
-class Guide extends Activity implements ViewPager.OnPageChangeListener{
+public class Guide extends Activity implements ViewPager.OnPageChangeListener,View.OnClickListener {
     private ViewPagerAdapter vpadpter;
     private ViewPager vp;
     private List<View> views;
     private ImageView[] dos;
+    private Button btn;
     private int[] ids={R.id.iv1,R.id.iv2,R.id.iv3};
 
 
@@ -28,8 +31,10 @@ class Guide extends Activity implements ViewPager.OnPageChangeListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guide);
+
         iniView();
         iniDos();
+
     }
 
     void iniDos(){
@@ -75,6 +80,12 @@ class Guide extends Activity implements ViewPager.OnPageChangeListener{
 
     @Override
     public void onPageScrollStateChanged(int state) {
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
 
     }
 }

@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/third"
    >
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="9">
+</LinearLayout>
 
-    <Button
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:layout_weight="1">
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:layout_weight="4.5"></LinearLayout>
+
+     <Button
+        android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_weight="1"
         android:text="开始体验"
-        android:textSize="20dp"
+        android:layout_alignParentBottom="true" />
 
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"/>
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:layout_weight="4.5"></LinearLayout>
 
-
+ </LinearLayout>
 
 
 </LinearLayout>

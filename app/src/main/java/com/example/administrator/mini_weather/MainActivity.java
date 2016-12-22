@@ -6,8 +6,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -24,12 +27,14 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.edu.pku.zhusonghe.bean.TodayWeather;
 import cn.edu.pku.zhusonghe.util.NetUtil;
 
 /** * Created by zhusonghe on 16/10/11. */
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends Activity implements ViewPager.OnPageChangeListener,View.OnClickListener {
     private  static  final  int UPDATE_TODAY_WEATHER = 1;
 
     private ImageView mUpdateBtn;
@@ -37,6 +42,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     private ImageView CitySelect;
 
+    private ViewPagerAdapter vpadpter;
+    private ViewPager vp;
+    private List<View> views;
+    private ImageView[] dos;
+
+    private int[] ids={R.id.iv1,R.id.iv2};
 
 
     private TextView wendu,cityTv,timeTv,humidityTV,weekTv,pmDataTv,pmQualityTV,temperatureTv,
@@ -75,6 +86,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
         initView();
+        iniDos();
     }
 
 
@@ -83,7 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      */
     private void queryWeatherCode(String cityCode) {
         final String address = "http://wthrcdn.etouch.cn/WeatherApi?citykey=" + cityCode;
-        Log.d("myWeather", address);
+       // Log.d("myWeather", address);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -104,7 +116,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         Log.d("myWeather",str);
                     }
                     String responseStr = response.toString();
-                    Log.d("myWeather", responseStr);
+                    Log.d("myWeather",responseStr);
                     todayWeather = parseXML(responseStr);
 
                     if (todayWeather != null){
@@ -141,7 +153,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             mUpdateBtn.setVisibility(view.INVISIBLE);
             mProgressBtn.setVisibility(view.VISIBLE);
             SharedPreferences sharedPreferences = getSharedPreferences("config", MODE_PRIVATE);
-            String cityCode = sharedPreferences.getString("main_ city_code", "101010100");
+            String cityCode = sharedPreferences.getString("main_city_code", "101010100");
             Log.d("myWeather", cityCode);
             if (NetUtil.getNetworkState(this) != NetUtil.NETWORN_NONE) {
                 Log.d("myWeather", "网络OK");
@@ -261,6 +273,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     }
 
+    void iniDos(){
+        dos = new ImageView[views.size()];
+        for(int i=0;i<views.size();i++){
+            dos[i]=(ImageView)findViewById(ids[i]);
+        }
+    }
+
     void  initView(){
         wendu = (TextView)findViewById(R.id.Currenttemper);
         city_name_Tv = (TextView) findViewById(R.id.title_city_name);
@@ -288,6 +307,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
         temperatureTv.setText("N/A");
         climateTv.setText("N/A");
         windTv.setText("N/A");
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        views =new ArrayList<View>();
+        views.add(inflater.inflate(R.layout.nextday1,null));
+        views.add(inflater.inflate(R.layout.nextday2,null));
+        vpadpter = new ViewPagerAdapter(views,this);
+        vp = (ViewPager) findViewById(R.id.viewpager);
+        vp.setAdapter(vpadpter);
+        vp.setOnPageChangeListener(this);
     }
 
     void updateTodayWeather(TodayWeather todayWeather){
@@ -388,6 +416,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mProgressBtn.setVisibility(View.INVISIBLE);
 
         //Toast.makeText(MainActivity.this, "更新成功！", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int i) {
+        for(int j=0;j<ids.length;j++){
+            if(j==i){
+                dos[j].setImageResource(R.drawable.page_indicator_focused);
+            }else {
+                dos[j].setImageResource(R.drawable.page_indicator_unfocused);
+            }
+        }
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 }
 

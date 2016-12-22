@@ -12,18 +12,18 @@
         <activity
             android:name=".MainActivity"
             android:label="MyWeather">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
 
+            </intent-filter>
         </activity>
         <activity android:name=".SelectCity">
 
 
         </activity>
         <activity android:name=".Guide">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
 
-            </intent-filter>
 
         </activity>
     </application>
