@@ -37,6 +37,8 @@ public class Guide extends Activity implements ViewPager.OnPageChangeListener,Vi
 
     }
 
+
+
     void iniDos(){
         dos = new ImageView[views.size()];
         for(int i=0;i<views.size();i++){
@@ -50,7 +52,7 @@ public class Guide extends Activity implements ViewPager.OnPageChangeListener,Vi
 
     public void iniView(){
         LayoutInflater inflater = LayoutInflater.from(this);
-        views =new ArrayList<View>();
+        views = new ArrayList<View>();
         views.add(inflater.inflate(R.layout.page1,null));
         views.add(inflater.inflate(R.layout.page2,null));
         views.add(inflater.inflate(R.layout.page3,null));
@@ -58,6 +60,8 @@ public class Guide extends Activity implements ViewPager.OnPageChangeListener,Vi
         vp = (ViewPager) findViewById(R.id.viewpager);
         vp.setAdapter(vpadpter);
         vp.setOnPageChangeListener(this);
+        btn = (Button) views.get(2).findViewById(R.id.start);
+        btn.setOnClickListener(this);
     }
 
 
@@ -85,7 +89,10 @@ public class Guide extends Activity implements ViewPager.OnPageChangeListener,Vi
 
     @Override
     public void onClick(View view) {
-
+        if (view.getId() == R.id.start){
+            Intent i= new Intent(this,MainActivity.class);
+            startActivity(i);
+        }
 
     }
 }

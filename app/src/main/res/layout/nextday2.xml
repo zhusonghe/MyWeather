@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- 明日信息模块 -->
+    <!-- 第四天信息模块 -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_weight="3.3">
 
-        <!-- 明日星期 -->
+        <!-- 第四天星期 -->
         <TextView
-            android:id="@+id/tomorrow_date"
+            android:id="@+id/four_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -22,16 +22,16 @@
             android:textSize="20dp"
             />
 
-        <!-- 明日天气图片 -->
+        <!-- 第四天天气图片 -->
         <ImageView
-            android:id="@+id/tomorrow_img"
+            android:id="@+id/four_img"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/biz_plugin_weather_qing" />
 
-        <!-- 明日温度 -->
+        <!-- 第四天温度 -->
         <TextView
-            android:id="@+id/tomorrow_wendu"
+            android:id="@+id/four_wendu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -39,9 +39,9 @@
             android:textSize="20dp"
             />
 
-        <!-- 明日气候 -->
+        <!-- 第四天气候 -->
         <TextView
-            android:id="@+id/tomorrow_climate"
+            android:id="@+id/four_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -49,9 +49,9 @@
             android:textSize="20dp"
             />
 
-        <!-- 明日风力 -->
+        <!-- 第四天风力 -->
         <TextView
-            android:id="@+id/tomorrow_fengli"
+            android:id="@+id/four_fengli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -61,16 +61,16 @@
 
     </LinearLayout>
 
-    <!-- 后天信息模块 -->
+    <!-- 第五天信息模块 -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_weight="3.3">
 
-        <!-- 后天星期 -->
+        <!-- 第五天星期 -->
         <TextView
-            android:id="@+id/houtian_date"
+            android:id="@+id/five_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -79,17 +79,17 @@
             android:textSize="20dp"
             />
 
-        <!-- 后天天气图片 -->
+        <!-- 第五天天气图片 -->
         <ImageView
-            android:id="@+id/houtian_img"
+            android:id="@+id/five_img"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
 
             android:src="@drawable/biz_plugin_weather_qing" />
 
-        <!-- 后天温度 -->
+        <!-- 第五天温度 -->
         <TextView
-            android:id="@+id/houtian_wendu"
+            android:id="@+id/five_wendu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -97,9 +97,9 @@
             android:textSize="20dp"
             />
 
-        <!-- 后天气候 -->
+        <!-- 第五天气候 -->
         <TextView
-            android:id="@+id/houtian_climate"
+            android:id="@+id/five_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -107,9 +107,9 @@
             android:textSize="20dp"
             />
 
-        <!-- 后天风力 -->
+        <!-- 第五天风力 -->
         <TextView
-            android:id="@+id/houtian_fengli"
+            android:id="@+id/five_fengli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -120,16 +120,16 @@
     </LinearLayout>
 
 
-    <!-- 大后天信息模块 -->
+    <!-- 第六天信息模块 -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_weight="3.3">
 
-        <!-- 大后天星期 -->
+        <!-- 第六天星期 -->
         <TextView
-            android:id="@+id/dahoutian_date"
+            android:id="@+id/six_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -138,17 +138,17 @@
             android:textSize="20dp"
             />
 
-        <!-- 大后天天气图片 -->
+        <!-- 第六天天气图片 -->
         <ImageView
-            android:id="@+id/dahoutian_img"
+            android:id="@+id/six_img"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
 
             android:src="@drawable/biz_plugin_weather_qing" />
 
-        <!-- 大后天温度 -->
+        <!-- 第六天温度 -->
         <TextView
-            android:id="@+id/dahoutian_wendu"
+            android:id="@+id/six_wendu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -156,9 +156,9 @@
             android:textSize="20dp"
             />
 
-        <!-- 大后天气候 -->
+        <!-- 第六天气候 -->
         <TextView
-            android:id="@+id/dahoutian_climate"
+            android:id="@+id/six_climate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -166,9 +166,9 @@
             android:textSize="20dp"
             />
 
-        <!-- 大后天风力 -->
+        <!-- 第六天风力 -->
         <TextView
-            android:id="@+id/dahoutian_fengli"
+            android:id="@+id/six_fengli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
