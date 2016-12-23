@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\shenzhu\AndroidStudioProjects\Mini-Weather2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="3b93f4a09597571b04b22e487391120895b084b0">
+        <dex dex="C:\Users\shenzhu\AndroidStudioProjects\Mini-Weather2\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_8755e986867db1abcd16fdb049e58be9cb65f414.jar" />
+    </item>
+
+</items>

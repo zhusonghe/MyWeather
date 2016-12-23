@@ -35,6 +35,53 @@ public class TodayWeather {
     private String low_3;
     private String fengli_3;
 
+    private String date_4;
+    private String type_4;
+    private String high_4;
+
+    public String getDate_4() {
+        return date_4;
+    }
+
+    public void setDate_4(String date_4) {
+        this.date_4 = date_4;
+    }
+
+    public String getType_4() {
+        return type_4;
+    }
+
+    public void setType_4(String type_4) {
+        this.type_4 = type_4;
+    }
+
+    public String getHigh_4() {
+        return high_4;
+    }
+
+    public void setHigh_4(String high_4) {
+        this.high_4 = high_4;
+    }
+
+    public String getLow_4() {
+        return low_4;
+    }
+
+    public void setLow_4(String low_4) {
+        this.low_4 = low_4;
+    }
+
+    public String getFengli_4() {
+        return fengli_4;
+    }
+
+    public void setFengli_4(String fengli_4) {
+        this.fengli_4 = fengli_4;
+    }
+
+    private String low_4;
+    private String fengli_4;
+
     public String getDate_1() {
 
         return date_1;

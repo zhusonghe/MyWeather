@@ -54,7 +54,8 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
              climateTv,windTv,city_name_Tv,
             temperatureTv_1,weekTv_1,climateTv_1,windTv_1,
             temperatureTv_2,weekTv_2,climateTv_2,windTv_2,
-            temperatureTv_3,weekTv_3,climateTv_3,windTv_3;
+            temperatureTv_3,weekTv_3,climateTv_3,windTv_3,
+            temperatureTv_4,weekTv_4,climateTv_4,windTv_4;
     private ImageView weatherImg,pmImg,weatherImg_1,weatherImg_2,weatherImg_3,weatherImg_4;
 
     private Handler mHandler = new Handler(){
@@ -124,8 +125,6 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
 
                     if (todayWeather != null){
                        //Log.d("myWeather",todayWeather.toString());
-
-
                         Message msg = new Message();
                         msg.what = UPDATE_TODAY_WEATHER;
                         msg.obj = todayWeather;
@@ -199,7 +198,6 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
         int lowCount=0;
         int typeCount=0;
         int dayCount=0;
-        int isDay=0;
         try {
             XmlPullParserFactory fac = XmlPullParserFactory.newInstance();
             XmlPullParser xmlPullParser = fac.newPullParser();
@@ -334,6 +332,30 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
                                 todayWeather.setType_3(xmlPullParser.getText());
                                 Log.d("haha",todayWeather.getType_3());
                                 typeCount++;
+                            }else if (xmlPullParser.getName().equals("fengli") && fengliCount == 4) {
+                                eventType = xmlPullParser.next() ;
+                                todayWeather.setFengli_4(xmlPullParser.getText());
+                                fengliCount++;
+                            } else if (xmlPullParser.getName().equals("date") && dateCount == 4) {
+                                eventType = xmlPullParser.next() ;
+                                todayWeather.setDate_4(xmlPullParser.getText());
+                                dateCount++;
+                            } else if (xmlPullParser.getName().equals("high") && highCount == 4) {
+                                eventType = xmlPullParser.next();
+                                todayWeather.setHigh_4(xmlPullParser.getText().substring(2).trim());
+                                highCount++;
+                            } else if (xmlPullParser.getName().equals("low") && lowCount == 4) {
+                                eventType = xmlPullParser.next() ;
+                                todayWeather.setLow_4(xmlPullParser.getText().substring(2).trim());
+                                lowCount++;
+                            } else if (xmlPullParser.getName().equals("day")&&dayCount==4){
+                                eventType = xmlPullParser.next() ;
+                                dayCount++;
+                            }else if (xmlPullParser.getName().equals("type") && typeCount == 4&&dayCount==5) {
+                                eventType = xmlPullParser.next() ;
+                                todayWeather.setType_4(xmlPullParser.getText());
+                                Log.d("haha",todayWeather.getType_4());
+                                typeCount++;
                             }
                         }
 
@@ -410,6 +432,13 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
         windTv_3=(TextView)findViewById(R.id.dahoutian_fengli);
 
 
+        //第四天天天气信息
+        weekTv_4=(TextView)findViewById(R.id.four_date);
+        weatherImg_4 = (ImageView) findViewById(R.id.four_img);
+        climateTv_4=(TextView)findViewById(R.id.four_climate);
+        temperatureTv_4=(TextView)findViewById(R.id.four_wendu);
+        windTv_4=(TextView)findViewById(R.id.four_fengli);
+
         wendu.setText("N/A");
         city_name_Tv.setText("N/A");
         cityTv.setText("N/A");
@@ -460,6 +489,13 @@ public class MainActivity extends Activity implements ViewPager.OnPageChangeList
         temperatureTv_3.setText(todayWeather.getLow_3()+"~"+todayWeather.getHigh_3());
         climateTv_3.setText(todayWeather.getType_3());
         windTv_3.setText(todayWeather.getFengli_3());
+
+        //第四天天气组件
+        weekTv_4.setText(todayWeather.getDate_4());
+        chooseType(todayWeather.getType_4(),weatherImg_4);
+        temperatureTv_4.setText(todayWeather.getLow_4()+"~"+todayWeather.getHigh_4());
+        climateTv_4.setText(todayWeather.getType_4());
+        windTv_4.setText(todayWeather.getFengli_4());
 
 
         String pm = todayWeather.getPm25();

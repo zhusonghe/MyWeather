@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第四天天气图片 -->
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第四天气候 -->
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第四天风力 -->
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
     </LinearLayout>
@@ -76,7 +76,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第五天天气图片 -->
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第五天气候 -->
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第五天风力 -->
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
     </LinearLayout>
@@ -135,7 +135,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第六天天气图片 -->
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第六天气候 -->
@@ -163,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
         <!-- 第六天风力 -->
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="N/A"
-            android:textSize="20dp"
+
             />
 
     </LinearLayout>
